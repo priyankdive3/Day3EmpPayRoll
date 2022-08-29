@@ -19,7 +19,7 @@ namespace EmployeePayroll
                     Console.WriteLine("is present");
                     break;
                 case 1:
-                    Console.WriteLine("is abscent");
+                    Console.WriteLine("is absent");
                     break;
                 default:
                     break;
