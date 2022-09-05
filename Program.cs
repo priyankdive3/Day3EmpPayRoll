@@ -6,7 +6,7 @@
             static void Main(string[] args)
             {
                 Console.WriteLine("Welcome To Employee Wage!");
-                Console.WriteLine("Choose option\n 1.Check absent or present\n2.Check daily employee wages\n3.Part time wage\n4.Part time wage using switch case\n5.Monthly Wages");
+                Console.WriteLine("Choose option\n 1.Check absent or present\n2.Check daily employee wages\n3.Part time wage\n4.Part time wage using switch case\n5.Monthly Wages\n6.Using While loo0p\n7.Refactor code");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -22,8 +22,14 @@
                     case 4:
                         PartTimeSwitch.CalculateWage();
                         break;
-                case 5:
-                    MonthlyWage.CalculateMonthlyWage();
+                   case 5:
+                         MonthlyWage.CalculateMonthlyWage();
+                    break;
+                   case 6:
+                        TotalWorkingHrWhileCase.CalculateWage();
+                    break;
+                   case 7:
+                        Refactor.CalculateEmpWage();
                     break;
                 default:
                         Console.WriteLine("Entered wrong choice");
