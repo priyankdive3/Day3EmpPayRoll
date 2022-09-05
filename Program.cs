@@ -6,8 +6,10 @@ namespace EmpPayroll
             static void Main(string[] args)
             {
                 Console.WriteLine("Welcome To Employee Wage!");
+
                 Console.WriteLine("Choose option\n 1.Check absent or present\n2.Check daily employee wages\n3.Part time wage\n4.Part time wage using switch case\n5.Monthly Wages\n6.Using While loo0p");
-                int option = Convert.ToInt32(Console.ReadLine());
+
+               int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
                     case 1:
@@ -24,11 +26,15 @@ namespace EmpPayroll
                         break;
                    case 5:
                          MonthlyWage.CalculateMonthlyWage();
-                    break;
+                         break;
                    case 6:
                         TotalWorkingHrWhileCase.CalculateWage();
                     break;
-                    default:
+                   case 7:
+                        Refactor.CalculateEmpWage();
+
+                    break;
+                   default:
                         Console.WriteLine("Entered wrong choice");
                         break;
                 }
