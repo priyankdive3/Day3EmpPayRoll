@@ -18,7 +18,7 @@ namespace EmployeePayRoll
         private int maxHourPerMonth;
         private int totalEmpWage;
 
-        public EmpWageBuilderObject(string company, int empRatePerHour, int numOfWorkinDay, int maxHourPerMonth)
+        public EmpWageBuilder(string company, int empRatePerHour, int numOfWorkinDay, int maxHourPerMonth)
         {
             this.company = company;
             this.empRatePerHour = empRatePerHour;
