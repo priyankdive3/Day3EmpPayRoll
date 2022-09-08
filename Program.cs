@@ -42,6 +42,14 @@ namespace EmpPayroll
                     reliance.computeEmpWage();
                     Console.WriteLine(reliance.ToString());
                     break;
+       
+                 case 10:
+                    EmpWageBuilderArray empWageBuilderArray = new EmpWageBuilderArray();
+                    empWageBuilderArray.addCompanyEmpWage("D-Mart", 20, 2, 10);
+                    empWageBuilderArray.addCompanyEmpWage("Reliance", 10, 4, 20);
+                    empWageBuilderArray.computeEmpWage();
+                break;
+
                 default:
                         Console.WriteLine("Entered wrong choice");
                         break;
