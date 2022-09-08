@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,33 +6,16 @@ using System.Threading.Tasks;
 
 namespace EmployeePayRoll
 {
-    internal class EmpWageBuilder
+    internal class MultipleCompanies
     {
-        
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
 
-        private string company;
-        private int empRatePerHour;
-        private int numOfWorkinDay;
-        private int maxHourPerMonth;
-        private int totalEmpWage;
-
-        public EmpWageBuilder(string company, int empRatePerHour, int numOfWorkinDay, int maxHourPerMonth)
+        public static void calculate(string company, int empRatePerHour, int numOfWorkinDay, int MaxHourPerMonth)
         {
-            this.company = company;
-            this.empRatePerHour = empRatePerHour;
-            this.numOfWorkinDay = numOfWorkinDay;
-            this.maxHourPerMonth = maxHourPerMonth;
-            
-        }
-
-        public void ComputeEmployeeWage()
-        {
-
             int empHrs = 0, totalEmpHrs = 0, totalWorkinDays = 0;
 
-            while (totalEmpHrs <= this.maxHourPerMonth && totalWorkinDays < this.numOfWorkinDay)
+            while (totalEmpHrs <= MaxHourPerMonth && totalWorkinDays < numOfWorkinDay)
             {
                 totalWorkinDays++;
 
@@ -54,13 +37,8 @@ namespace EmployeePayRoll
                 totalEmpHrs += empHrs;
                 Console.WriteLine("Day#: " + totalWorkinDays + " Employee hours : " + empHrs + " Total employee hours : " + totalEmpHrs);
             }
-            totalEmpWage = totalEmpHrs * empRatePerHour;
+            int totalEmpWage = totalEmpHrs * empRatePerHour;
             Console.WriteLine("Total employee wage for company : " + company + " is : " + totalEmpWage);
-        }
-
-        public string toString()
-        {
-            return "Total employee wage for company : " + this.company + " is : " + this.totalEmpWage;
         }
     }
 }
